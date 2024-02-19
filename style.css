@@ -37,11 +37,14 @@ button {
   padding: 0.7rem 2rem;
   border-radius: 2rem;
   font-weight: 600;
+  cursor: pointer;
 }
 
 img {
-  max-width: 100%;
-  display: block;
+}
+
+body {
+  font-family: "Overpass", sans-serif;
 }
 
 /* ------------Header------------------ */
@@ -62,7 +65,6 @@ img {
   color: var(--White);
   height: calc(100vh - 5rem);
   border-radius: 0 0 0 3rem;
-  font-family: "Overpass", sans-serif;
 }
 .header {
   display: flex;
@@ -130,6 +132,11 @@ img {
   border: none;
 }
 
+.signup:hover {
+  background-color: var(--Very_Light_Red);
+  color: white;
+}
+
 /* ------------Hero-section------------------ */
 
 .hero-section {
@@ -160,10 +167,20 @@ img {
   color: white;
 }
 
+.btn-learn:hover {
+  background-color: white;
+  color: var(--Light_Red);
+}
+
 .btn-start {
   background-color: white;
   color: var(--Very_Light_Red);
   border: none;
+}
+
+.btn-start:hover {
+  background-color: var(--Very_Light_Red);
+  color: white;
 }
 
 .hero-arrow {
@@ -188,11 +205,105 @@ img {
   display: flex;
   justify-content: center;
   align-items: center;
+  gap: 2rem;
 }
 
 .text-half,
 .img-half {
   width: 50%;
+  text-align: left;
+}
+
+.designed-heading {
+  font-size: 2rem;
+}
+
+.text-half p {
+  color: var(--Grayish_Blue);
+}
+
+.text-box h3 {
+  margin: 2rem 0;
+  text-align: left;
+  font-size: 2rem;
+  color: var(--Very_Dark_Grayish_Blue);
+}
+
+/* ------------Product-section------------------ */
+
+.content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-image: url("./images/bg-pattern-circles.svg"),
+    linear-gradient(
+      to right,
+      var(--Body_Very_Dark_Gray_Blue),
+      var(--Body_Very_Dark_Desaturated_Blue)
+    );
+  background-repeat: no-repeat;
+  background-position: -20% 80%;
+  height: 20rem;
+  margin: 3rem 0;
+  color: white;
+  gap: 3rem;
+  border-radius: 0 3rem 0 3rem;
+}
+
+.content h3 {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+}
+/* ------------Laptop-section------------------ */
+
+.inhalt-laptop {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.inhalt-laptop h3 {
+  font-size: 2rem;
+  color: var(--Very_Dark_Grayish_Blue);
+}
+
+.text-half-laptop,
+.img-half-laptop {
+  width: 50%;
+  text-align: left;
+}
+
+.img-half-laptop img {
+  position: relative;
+  left: -30rem;
+  flex-shrink: 1;
+}
+
+/* ------------Footer-Section------------------ */
+
+.footer {
+  background-color: var(--Body_Very_Dark_Gray_Blue);
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  height: 20rem;
+  padding: 3rem;
+  border-radius: 0 3rem 0 0;
+}
+
+.footer h3 {
+  color: var(--White);
+  margin-bottom: 2rem;
+}
+
+.box ul {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.box ul a:hover {
+  text-decoration: underline;
 }
 
 .show {
