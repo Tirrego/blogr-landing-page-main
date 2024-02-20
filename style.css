@@ -431,12 +431,13 @@ footer {
     color: black;
   }
 
-  .nav__links {
+  .nav__links, .user-menu-desktop {
     flex-direction: column;
+
   }
 
-  .user-menu-desktop {
-    flex-direction: column;
+  .nav__links__link {
+    text-align: center;
   }
 
   .expand-items {
