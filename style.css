@@ -40,11 +40,17 @@ button {
   cursor: pointer;
 }
 
-img {
-}
-
 body {
   font-family: "Overpass", sans-serif;
+}
+
+.linie {
+  display: none;
+  width: 100%;
+}
+
+.exit {
+  display: none;
 }
 
 /* ------------Header------------------ */
@@ -69,12 +75,18 @@ body {
 .header {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  width: 100%;
+}
+
+.logo {
+  margin-right: 2rem;
 }
 /* ------------Navigation------------------ */
 .nav-desktop {
   display: flex;
   gap: 2rem;
+  width: 100%;
+  justify-content: space-between;
 }
 
 .nav__links {
@@ -123,6 +135,7 @@ body {
   display: flex;
   align-items: center;
   gap: 2rem;
+  justify-self: end;
 }
 
 .user-menu-desktop .signup {
@@ -199,19 +212,27 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  margin: 5rem 0 8rem 12rem;
 }
 
 .inhalt {
   display: flex;
-  justify-content: center;
   align-items: center;
   gap: 2rem;
+  width: 100%;
+  overflow: hidden;
 }
 
 .text-half,
 .img-half {
   width: 50%;
   text-align: left;
+}
+
+.img-half img {
+  position: relative;
+  right: -12rem;
+  max-width: 100%;
 }
 
 .designed-heading {
@@ -243,7 +264,7 @@ body {
     );
   background-repeat: no-repeat;
   background-position: -20% 80%;
-  height: 20rem;
+  height: 25rem;
   margin: 3rem 0;
   color: white;
   gap: 3rem;
@@ -254,12 +275,15 @@ body {
   font-size: 2rem;
   margin-bottom: 2rem;
 }
+
 /* ------------Laptop-section------------------ */
 
 .inhalt-laptop {
   display: flex;
   justify-content: center;
   align-items: center;
+  overflow: hidden;
+  margin: 5rem 12rem 8rem 0;
 }
 
 .inhalt-laptop h3 {
@@ -275,8 +299,8 @@ body {
 
 .img-half-laptop img {
   position: relative;
-  left: -30rem;
-  flex-shrink: 1;
+  left: -12rem;
+  max-width: 100%;
 }
 
 /* ------------Footer-Section------------------ */
@@ -293,7 +317,7 @@ body {
 
 .footer h3 {
   color: var(--White);
-  margin-bottom: 2rem;
+  margin: 3rem 0;
 }
 
 .box ul {
@@ -306,8 +330,17 @@ body {
   text-decoration: underline;
 }
 
-.show {
-  display: flex;
+footer {
+  background-color: var(--Body_Very_Dark_Gray_Blue);
+}
+
+.menu-icon {
+  display: none;
+  position: absolute;
+  right: 0;
+  top: 0;
+  margin: 1rem 1rem;
+  cursor: pointer;
 }
 
 @keyframes move {
@@ -319,3 +352,135 @@ body {
 .rotate {
   transform: rotate(180deg);
 }
+
+@media (max-width: 970px) {
+  .container {
+    padding: 0;
+  }
+
+  .designed {
+    margin: 0;
+  }
+  .inhalt {
+    flex-direction: column;
+    margin: 0;
+  }
+  .text-half,
+  .img-half {
+    width: 100%;
+    text-align: center;
+  }
+
+  .text-half {
+    padding: 2rem 3rem;
+    text-align: left;
+  }
+
+  .img-half img {
+    position: static;
+    max-width: 60%;
+  }
+
+  .content {
+    flex-direction: column;
+    height: auto;
+    padding: 3rem 5rem;
+  }
+
+  .inhalt-laptop {
+    flex-direction: column;
+    justify-content: center;
+    margin: 2rem 0;
+  }
+
+  .img-half-laptop img {
+    position: static;
+    max-width: 100%;
+  }
+
+  .footer {
+    flex-direction: column;
+    height: auto;
+    justify-content: center;
+    align-items: center;
+    padding: 3rem 0;
+  }
+
+  .menu-icon {
+    display: flex;
+  }
+
+  .header {
+    flex-direction: column;
+    padding: 2rem 0;
+    height: auto;
+  }
+
+  .nav-desktop {
+    display: none;
+    flex-direction: column;
+    background-color: white;
+    margin: 0 4rem;
+    width: 80%;
+    border-radius: 2rem;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    padding: 2rem 0;
+  }
+
+  .nav-desktop a {
+    color: black;
+  }
+
+  .nav__links {
+    flex-direction: column;
+  }
+
+  .user-menu-desktop {
+    flex-direction: column;
+  }
+
+  .expand-items {
+    position: relative;
+  }
+
+  .product {
+    left: 0;
+  }
+
+  .wrapper {
+    height: auto;
+    padding: 0 0 3rem 0;
+  }
+
+  .hero-arrow {
+    display: none;
+  }
+
+
+ 
+
+  .user-menu-desktop .signup {
+    background-color: var(--Very_Light_Red);
+    color: white;
+  }
+
+  .exit {
+    position: absolute;
+    right: 0;
+    top: 0;
+    margin: 1rem 1rem;
+    cursor: pointer;
+  }
+
+  .linie {
+    display: block;
+  }
+}
+.disable {
+  display: none;
+}
+
+.show {
+  display: flex;
+}
+

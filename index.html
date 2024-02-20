@@ -34,20 +34,33 @@
     <div class="universal">
       <div class="wrapper">
         <header class="header container">
+          <div class="logo">
+            <img src="./images/logo.svg" alt="image from the Logo Blogr" />
+          </div>
+          <div class="menu-icon">
+            <img src="./images/icon-hamburger.svg" alt="" />
+          </div>
           <nav class="nav-desktop">
-            <div class="logo">
-              <img src="./images/logo.svg" alt="image from the Logo Blogr" />
+            <div class="exit disable">
+              <img src="./images/icon-close.svg" alt="" />
             </div>
             <div class="nav__links">
               <div class="expand">
                 <li class="nav__links__link">
                   <a href="#"
                     >Product
-                    <img
-                      class="arrow"
-                      src="./images/icon-arrow-light.svg"
-                      alt=""
-                  /></a>
+                    <picture>
+                      <source
+                        srcset="./images/icon-arrow-light.svg"
+                        media="(min-width: 970px)"
+                      />
+                      <img
+                        class="arrow"
+                        src="./images/icon-arrow-dark.svg"
+                        alt=""
+                      />
+                    </picture>
+                  </a>
                 </li>
                 <div class="expand-items product">
                   <ul>
@@ -63,11 +76,17 @@
                 <li class="nav__links__link">
                   <a href="#"
                     >Company
-                    <img
-                      class="arrow"
-                      src="./images/icon-arrow-light.svg"
-                      alt=""
-                  /></a>
+                    <picture>
+                      <source
+                        srcset="./images/icon-arrow-light.svg"
+                        media="(min-width: 970px)"
+                      />
+                      <img
+                        class="arrow"
+                        src="./images/icon-arrow-dark.svg"
+                        alt=""
+                      /> </picture
+                  ></a>
                 </li>
                 <div class="expand-items company">
                   <ul>
@@ -82,12 +101,19 @@
                 <li class="nav__links__link">
                   <a href="#"
                     >Connect
-                    <img
-                      class="arrow"
-                      src="./images/icon-arrow-light.svg"
-                      alt=""
-                  /></a>
+                    <picture>
+                      <source
+                        srcset="./images/icon-arrow-light.svg"
+                        media="(min-width: 970px)"
+                      />
+                      <img
+                        class="arrow"
+                        src="./images/icon-arrow-dark.svg"
+                        alt=""
+                      /> </picture
+                  ></a>
                 </li>
+
                 <div class="expand-items connect">
                   <ul>
                     <li><a href="#">Contact</a></li>
@@ -97,11 +123,12 @@
                 </div>
               </div>
             </div>
+            <hr class="linie" />
+            <div class="user-menu-desktop">
+              <a href="" class="login">Login</a>
+              <button href="" class="signup">Sign Up</button>
+            </div>
           </nav>
-          <div class="user-menu-desktop">
-            <a href="" class="login">Login</a>
-            <button href="" class="signup">Sign Up</button>
-          </div>
         </header>
         <section class="hero-section">
           <h1 class="hero-heading">A modern publishing platform</h1>
@@ -116,7 +143,7 @@
         </section>
       </div>
       <main>
-        <section class="designed container">
+        <section class="designed">
           <h1 class="designed-heading">Designed for the future</h1>
           <div class="inhalt">
             <div class="text-half">
@@ -150,7 +177,7 @@
         <section class="product-view">
           <div class="content container">
             <div class="img-product">
-              <img src="/images/illustration-phones.svg" alt="" />
+              <img src="./images/illustration-phones.svg" alt="" />
             </div>
             <div class="text-product">
               <h3>State of the Art Infrastructure</h3>
@@ -163,7 +190,7 @@
             </div>
           </div>
         </section>
-        <section class="laptop container">
+        <section class="laptop">
           <div class="inhalt-laptop">
             <div class="img-half-laptop">
               <img src="./images/illustration-laptop-desktop.svg" alt="" />
@@ -230,7 +257,7 @@
           Challenge by
           <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
             >Frontend Mentor</a
-          >. Coded by <a href="#">Your Name Here</a>.
+          >. Coded by <a href="#">Gerrit Schmittel</a>.
         </div>
       </footer>
       <script src="index.js"></script>
